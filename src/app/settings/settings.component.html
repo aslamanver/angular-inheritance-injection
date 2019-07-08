@@ -1,0 +1,7 @@
+<p>settings works!</p>
+<a [routerLink]="['/dashboard']">Dashboard</a>
+
+<div *ngFor="let name of nameList">{{name}}</div>
+
+<hr>
+<button (click)="childMethod()">Change</button>

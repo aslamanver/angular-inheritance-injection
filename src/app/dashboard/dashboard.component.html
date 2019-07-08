@@ -1,0 +1,18 @@
+<p>dashboard works!</p>
+<a [routerLink]="['settings']">Settings</a>
+
+<div *ngFor="let name of nameList">{{name}}</div>
+
+<hr>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <span *ngFor="let letter of nameArray(); let i = index">
+        <input maxLength="1" style="width:25px" autocomplete="off" (keyup)="onKeyup($event, i)" [disabled]="letter != '_'" value="{{letter == '_' ? '' : letter}}" id="name-{{i}}" type="text">
+    </span>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+
+<router-outlet></router-outlet>

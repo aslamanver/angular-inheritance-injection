@@ -16,7 +16,7 @@ export class AppComponent extends BaseComponent {
 
   ngOnInit() {
     super.ngOnInit()
-    this.myService.getUsers()
+    // this.myService.getUsers()
   }
 
 }
